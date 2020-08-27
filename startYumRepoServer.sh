@@ -2,7 +2,7 @@
 
 # 读取定义的变量
 source env.sh
-
+set +u
 RPM_PATH=${sysroot}
 
 start(){
@@ -35,4 +35,5 @@ case $1 in
         ;;
     *)
         echo "$0 start|stop|restart|status"
+        ;;
 esac
