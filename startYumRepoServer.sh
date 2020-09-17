@@ -2,6 +2,7 @@
 
 # 读取定义的变量
 source env.sh
+set +u
 
 RPM_PATH=${sysroot}
 
@@ -19,7 +20,8 @@ status(){
      echo "repo is down"
  fi
 }
-case $1 in
+action=$1
+case $action in
     start)
         start
         ;;
@@ -35,4 +37,5 @@ case $1 in
         ;;
     *)
         echo "$0 start|stop|restart|status"
+       ;;
 esac

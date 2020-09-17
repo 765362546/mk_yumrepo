@@ -95,3 +95,8 @@ wget
 yum-utils
 zip
 zlib.i686
+make
+chrony
+sudo
+less
+numactl

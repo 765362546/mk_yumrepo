@@ -14,7 +14,7 @@ fi
 
 install_createrepo (){
   echo "安装createrepo工具"
-  yum install createrepo -y
+  yum install createrepo -y -c ${yum_config}
 }
 
 down_rpms(){
@@ -36,6 +36,8 @@ add_other_rpm(){
 echo "拷贝other下的rpms"
 for name in {a..z};do
     cp ${CUR}/other/${name}*.rpm ${sysroot}/Packages/${name}/ &>/dev/null
+    #下面是将大写开头的也拷贝到小写字母开头的目录
+    cp ${CUR}/other/${name^^}*.rpm ${sysroot}/Packages/${name}/ &>/dev/null
 done
   
 }
