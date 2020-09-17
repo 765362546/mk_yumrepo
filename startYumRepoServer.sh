@@ -3,7 +3,10 @@
 # 读取定义的变量
 source env.sh
 set +u
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2906f2e6b2397c022d24ed3511889122699c8f19
 RPM_PATH=${sysroot}
 
 start(){
@@ -37,5 +40,9 @@ case $action in
         ;;
     *)
         echo "$0 start|stop|restart|status"
+<<<<<<< HEAD
        ;;
+=======
+        ;;
+>>>>>>> 2906f2e6b2397c022d24ed3511889122699c8f19
 esac
