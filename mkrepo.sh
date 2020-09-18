@@ -25,6 +25,7 @@ cat ${rpmlist} |xargs |xargs yum -c ${yum_config} --installroot="${sysroot}" --d
 echo '调整文件位置'
 for name in {a..z};do
     mv ${sysroot}/tmp/${name}*.rpm ${sysroot}/Packages/${name}/ &>/dev/null
+    mv ${sysroot}/tmp/${name^^}*.rpm ${sysroot}/Packages/${name}/ &>/dev/null
 done
 mv ${sysroot}/tmp/* ${sysroot}/Packages/ &>/dev/null  
 rm -rf ${sysroot}/tmp &>/dev/null 
