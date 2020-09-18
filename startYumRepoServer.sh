@@ -40,9 +40,5 @@ case $action in
         ;;
     *)
         echo "$0 start|stop|restart|status"
-<<<<<<< HEAD
-       ;;
-=======
         ;;
->>>>>>> 2906f2e6b2397c022d24ed3511889122699c8f19
 esac
